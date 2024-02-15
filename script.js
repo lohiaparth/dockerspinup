@@ -1,6 +1,10 @@
 function sendMessage() {
     // Get the message from the textarea
-    var message = document.getElementById("msg-bar").value;
+    var message = document.getElementById("msg-bar").value.trim();
+
+    if (message === "") {
+        return; // Exit the function if the message is empty
+    }
 
     // Clear the textarea
     document.getElementById("msg-bar").value = "";

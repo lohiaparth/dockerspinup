@@ -1,5 +1,5 @@
 .left {
-    border: solid blue;
+    
     /* display: flex; */
     position: fixed;
     background-color: whitesmoke;
@@ -15,12 +15,16 @@
 }
 
 .left-header{
+    display: flex;
+    justify-content: center;
     padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     background-color: #ddd;
 }
 
 .chat-list {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     list-style-type: none; /* Remove bullet points */
 }
 
@@ -36,7 +40,7 @@
 
 
 .main {
-    border: solid blue;
+    border: none;
     /* display: flex; */
     /* justify-content: center;
     align-items: center; */
@@ -46,31 +50,37 @@
     position: absolute;
     right: 0;
     top: 0;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .chat-bar {
-    
-    background-color: white;
-    width: calc(100% - 10px); /* Adjusted width to accommodate the padding */
+
+    position: fixed;
+    background-color: rgb(238, 237, 237);
+    width: inherit ;/* Adjusted width to accommodate the padding */
     height: 60px;
-    position: absolute;
-    right: 5px;
-    left: 5px;
+    position: fixed;
+    /* right: 5px; */
+    
     bottom: 10px; /* Adjust as needed */
-    border: solid blue;
+    
     border-radius: 20px;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 .sub-btn {
-    border: solid blue;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: solid blue; */
     position: absolute;
     right: 10px;
     bottom: 10px;
     border-radius: 0 10px 10px 0;
     width: 50px;
     height: 40px;
-    background-color: white;
+    background-color: inherit;
 }
 
 #msg-bar{
@@ -91,9 +101,15 @@
 }
 
 .msg{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 2px;
+    padding-top: 20px;
     display: block;
     margin-bottom: 10px;
     overflow: auto;
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
 
 
 }
@@ -103,7 +119,7 @@
 
     overflow: auto;
   margin: 4px;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 8px;
   display: block;
 
@@ -112,10 +128,14 @@
   border-color: red;
   float: left;
   border-bottom-left-radius: 0px;
+  overflow: auto;
+  clear: both;
+  max-width: 400px;
    
 }
 
 .user-msg{
+    word-wrap: break-word;
     padding: 10px;
     float: right;
 
@@ -125,10 +145,17 @@
   border-radius: 8px;
   display: block;
   text-align: left;
+  
   margin-left: 36px;
   border-color: blue;
   float: right;
   border-bottom-right-radius: 0px;
+  overflow-y: auto;
+  /* overflow: auto; */
+  clear: both;
+  max-width: 400px;
+  
+  height: fit-content;
 
 }
 
